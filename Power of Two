@@ -1,0 +1,29 @@
+class Solution {
+    public boolean power(int n)
+    {
+        if(n%2!=0)
+        {
+            return false;
+        }
+        if(n<=2&&n%2==0)
+        {
+            return true; 
+        }
+        return power(n/2);
+        
+    }
+    public boolean isPowerOfTwo(int n) {
+        if(n==0)
+        {
+            return false;
+        }
+        if(n==1)
+        {
+            return true;
+        }
+        if(n<0){
+            return false;
+        }
+        return power(n);
+    }
+}
